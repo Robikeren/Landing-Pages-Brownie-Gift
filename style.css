@@ -1,0 +1,175 @@
+:root{
+  --pink-1: #ffeef6;
+  --pink-2: #ffb3d1;
+  --pink-3: #ff6fa3;
+  --accent: #ff4d87;
+  --muted: #6b6b6b;
+}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--pink-1), #fff);
+  color: #222;
+}
+.navbar{
+  transition: background-color 0.3s ease;
+  line-height: 1.5;
+}
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.navbar-brand strong{ color: var(--accent); }
+.navbar-brand div { line-height: 1.5; }
+.hero {
+  background: linear-gradient(180deg, rgba(255,90,140,0.06), rgba(255,90,140,0.02));
+  padding: 4rem 0;
+}
+.hero-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.hero-image {
+  width: 100%;
+  max-height: 200px;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: opacity 0.5s ease-in-out;
+}
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: .75rem;
+  background: linear-gradient(135deg, rgba(255,111,160,0.12), rgba(255,77,135,0.06));
+  color: var(--accent);
+  font-size: 1.4rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+}
+.feature-icon:hover {
+  transform: scale(1.1);
+}
+.card-product {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.card-product:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(255,77,135,0.2);
+}
+.card-product img{
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  transition: opacity 0.3s ease;
+}
+.card-product:hover img {
+  opacity: 0.9;
+}
+.price {
+  color: var(--accent);
+  font-weight: 700;
+}
+.why-image {
+  width: 100%;
+  max-height: 150px;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.why-image:hover {
+  transform: scale(1.05);
+}
+.testimonial-card{
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  padding: 1rem;
+  background: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+.promo {
+  background: linear-gradient(90deg, rgba(255,111,160,0.06), rgba(255,77,135,0.04));
+  border-radius: 1rem;
+  padding: 1.2rem;
+  transition: box-shadow 0.3s ease;
+}
+.promo:hover {
+  box-shadow: 0 8px 20px rgba(255,77,135,0.15);
+}
+.about-image {
+  width: 100%;
+  max-height: 200px;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.about-image:hover {
+  transform: scale(1.05);
+}
+footer {
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.img-hover {
+  transition: transform 0.3s ease;
+}
+.img-hover:hover {
+  transform: scale(1.05);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.animate-zoom-in {
+  animation: zoomIn 1s ease-in-out;
+}
+@keyframes slideLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.animate-slide-left {
+  animation: slideLeft 1s ease-in-out;
+}
+@keyframes slideRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.animate-slide-right {
+  animation: slideRight 1s ease-in-out;
+}
+@keyframes bounceIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.animate-bounce-in {
+  animation: bounceIn 1s ease-in-out;
+}
+@media (max-width: 767px){
+  .hero-image { max-height: 150px; }
+  .card-product img { height: 200px; }
+  .why-image { max-height: 100px; }
+  .about-image { max-height: 150px; }
+}
